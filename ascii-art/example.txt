@@ -1,0 +1,49 @@
+package asciiart
+
+import (
+	"fmt"
+	"os"
+	"strings"
+)
+
+type ascii [8]string
+
+var Kaart = map[rune]ascii{} tekst mida sisetataksew siis iga täht on ruun. Ruunile vastab ascii type
+
+func Initialize(textfile string) { 
+	file, err := os.ReadFile(textfile) //võtab fondi faili
+	if err != nil {
+		fmt.Println("Error reading", textfile, err) 
+		return
+	}
+	file = []byte(strings.ReplaceAll(string(file), "\r", "")) //windowsi jua
+	lines := strings.Split(string(file), "\n") // uue rea kaupa teed txt lahti.
+	for kar := ' '; kar <= '~'; kar++ { // kas läheb ruuni sisse ehk karakter tähes. Ehk kõik printidavad karakterid ascii tabelist alates 32
+		asciikaart := ascii{} // mapi value pool. 8 STRINGILE array 
+		for rida := 0; rida < 8; rida++ {
+			asciikaart[rida] = lines[1+rida+int(kar-' ')*9]
+		}
+		Kaart[kar] = asciikaart // mapib ära ruunid selle tähemärgi
+	}
+}
+
+func PrintString(text string) string {
+	var result strings.Builder
+	words := strings.Split(text, "\\n")
+	for _, word := range words {
+		if word == "" {
+			result.WriteString("\n")
+			continue
+		}
+		for rida := 0; rida < 8; rida++ {
+			for _, ch := range word {
+				result.WriteString(Kaart[ch][rida])
+			}
+			result.WriteString("\n")
+		}
+	}
+	return result.String()
+}
+
+
+return.result saab lihtsalt printida.
