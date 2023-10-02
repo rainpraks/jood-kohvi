@@ -12,7 +12,7 @@ func TestMapCharacters(t *testing.T) {
 	}{
 		// TODO: Add test cases.
 		{"Test case 1", map[rune]ascii{
-			'h': {
+			'H': {
 				"      ",
 				" _    _  ",
 				"| |  | | ",
