@@ -1,10 +1,7 @@
 package main
 
 import (
-	"bufio"
-	"bytes"
 	"fmt"
-	"log"
 	"os"
 	"strings"
 )
@@ -20,16 +17,16 @@ func MapCharacters() map[rune]ascii {
 
 	}
 	file = []byte(strings.ReplaceAll(string(file), "\r", "")) // Remove carriage return characters if any (for Windows compatibility)
-	scanner := bufio.NewScanner(bytes.NewReader(file))        // scanner that reads lines from the content. Together, this line prepares a Scanner to iterate through the lines of the file content, making it convenient for processing text files line by line.
+	//scanner := bufio.NewScanner(bytes.NewReader(file))        // scanner that reads lines from the content. Together, this line prepares a Scanner to iterate through the lines of the file content, making it convenient for processing text files line by line.
 
-	var currentChar rune
-	var currentAscii ascii
+	//teen array mis iga n\ teeb selle tükideks ja see on eraldi üksus array sees
+	//mapid key on ruun ja value on need 8 rida failis
+	//loop alusta spaceist ja lõpeta kuni viimase täheni. Iga loobi juures mappis key ära , läks omakorda loopi mis loopis 8 korda ja mappis values. Otsi tarka valemit. ja peale
+	lines := strings.Split(string(file), "\n") // uue rea kaupa teed txt lahti.
+	for currentChar, 
+	
 
-	//prindi ascii art esimene kaheksa rida välja.
-	//karakter mapi hakka 32 hakkad kõlge mappima ascii värtusi txt failist 8 kaupa
-	//prindi suvaline täht, vaata kas teeb õige tähe
-	//returnid mapi
-	//pidu
+
 
 	// see mis on allpool on puhas pask
 	/*

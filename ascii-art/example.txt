@@ -21,9 +21,9 @@ func Initialize(textfile string) {
 	for kar := ' '; kar <= '~'; kar++ { // kas läheb ruuni sisse ehk karakter tähes. Ehk kõik printidavad karakterid ascii tabelist alates 32
 		asciikaart := ascii{} // mapi value pool. 8 STRINGILE array 
 		for rida := 0; rida < 8; rida++ {
-			asciikaart[rida] = lines[1+rida+int(kar-' ')*9]
+			asciikaart[rida] = lines[1+rida+int(kar-' ')*9] //1+0+0*9 esimene loop
 		}
-		Kaart[kar] = asciikaart // mapib ära ruunid selle tähemärgi
+		Kaart[kar] = asciikaart // mapib ära ruunid selle tähemärgi //siin me mapime esiumese tahe ara
 	}
 }
 
