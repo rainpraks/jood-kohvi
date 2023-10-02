@@ -27,7 +27,7 @@ func MapCharacters() map[rune]ascii {
 	lines := strings.Split(string(file), "\n") // uue rea kaupa teed txt lahti.
 	for char := ' '; char <= '~'; char++ {
 		asciimap := ascii{}
-		for line := 0; line < 9; line++ {
+		for line := 0; line < 8; line++ {
 			asciimap[line] = lines[1+line+int(char-' ')*9]
 		}
 		Kaart[char] = asciimap
