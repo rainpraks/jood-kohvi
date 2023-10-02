@@ -11,7 +11,19 @@ func TestMapCharacters(t *testing.T) {
 		want map[rune]ascii
 	}{
 		// TODO: Add test cases.
-		{"test1", map[rune]ascii{'h': ascii{"", " _", "| |", "| |_", "| '_ \\", "| | | |", "|_| |_|"}}},
+		{"Test case 1", map[rune]ascii{
+			'h': {
+				"      ",
+				" _    _  ",
+				"| |  | | ",
+				"| |__| | ",
+				"|  __  | ",
+				"|_|  |_| ",
+				"        ",
+				"        ",
+			},
+		}},
+		// Add more test cases as needed.
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

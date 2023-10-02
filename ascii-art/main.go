@@ -40,7 +40,7 @@ func MapCharacters() map[rune]ascii {
 		if currentChar == 0 { // HANDLING THE FIRST RUNE OF A CHARACTER. if currentchar is 0 it means we are starting a new character
 			currentChar = []rune(line)[0] // set currentChar to the first rune of the line. Otherwise (if currentChar is not 0), it means we are continuing with the ASCII representation of the current character
 		} else {
-			currentAscii[len(currentAscii)-1] += line // Append each line to the corresponding element of the currentascii array.
+			currentAscii[len(currentAscii)-1] = line // Append each line to the corresponding element of the currentascii array.
 		}
 	}
 	if err := scanner.Err(); err != nil {
@@ -48,6 +48,7 @@ func MapCharacters() map[rune]ascii {
 		return nil
 	}
 	return charMap
+
 }
 
 func printAsciiArt(inputText string, charMap map[rune]ascii) {
