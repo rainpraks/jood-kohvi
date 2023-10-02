@@ -25,7 +25,7 @@ func MapCharacters() map[rune]ascii {
 	//mapid key on ruun ja value on need 8 rida failis
 	//loop alusta spaceist ja lõpeta kuni viimase täheni. Iga loobi juures mappis key ära , läks omakorda loopi mis loopis 8 korda ja mappis values. Otsi tarka valemit. ja peale
 	lines := strings.Split(string(file), "\n") // uue rea kaupa teed txt lahti.
-	for char := " "; char <= "~"; char++ {
+	for char := ' '; char <= '~'; char++ {
 		asciimap := ascii{}
 		for line := 0; line < 9; line++ {
 			asciimap[line] = lines[1+line+int(char-' ')*9]
