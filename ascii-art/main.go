@@ -26,7 +26,7 @@ func MapCharacters() map[rune]ascii {
 	//loop alusta spaceist ja lõpeta kuni viimase täheni. Iga loobi juures mappis key ära , läks omakorda loopi mis loopis 8 korda ja mappis values. Otsi tarka valemit. ja peale
 	lines := strings.Split(string(file), "\n") // uue rea kaupa teed txt lahti.
 	for char := ' '; char <= '~'; char++ {
-		asciimap := ascii{} //see on tüüp
+		asciimap := ascii{}
 		for line := 0; line < 8; line++ {
 			asciimap[line] = lines[1+line+int(char-' ')*9]
 		}
@@ -38,18 +38,19 @@ func MapCharacters() map[rune]ascii {
 }
 
 func printAsciiArt(inputText string, charMap map[rune]ascii) {
-	for _, char := range inputText {
-		asciiArt, exists := charMap[char]
-		if !exists {
-			fmt.Printf("ASCII art not available for character: %c\n", char)
-			continue
-		}
+	for line := 0; line < 8; line++ {
+		for index, char := range inputText {
+			if inputText[index] == '\\' && inputText[index+1] == 'n' {
+				fmt.Print("\n") // iga value vajab \n
+			}
 
-		for _, line := range asciiArt {
-			fmt.Print(line)
+			fmt.Print(charMap[char][line])
 		}
+		fmt.Print("\n")
 	}
+
 }
+
 func main() {
 	if len(os.Args) != 2 {
 		fmt.Println("Usage: go run . \"inputtext\"")
