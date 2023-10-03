@@ -11,8 +11,7 @@
             "mode": "auto",
             "program": "${workspaceFolder}" ,
             "args": [
-                "sample.txt",
-                "uus.txt"
+                "Hello\n\nLukas",
               ]
         }
     ]
