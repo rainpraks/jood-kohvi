@@ -40,17 +40,13 @@ func MapCharacters() map[rune]ascii {
 func printAsciiArt(inputText string, charMap map[rune]ascii) {
 	parts := strings.Split(inputText, "\\n")
 	for _, part := range parts {
-		fmt.Print(part)
-		fmt.Print("\n")
+		for line := 0; line < 8; line++ {
+			for _, char := range part {
 
-	}
-
-	for line := 0; line < 8; line++ {
-		for _, char := range inputText {
-
-			fmt.Print(charMap[char][line])
+				fmt.Print(charMap[char][line])
+			}
+			fmt.Print("\n")
 		}
-		fmt.Print("\n")
 	}
 }
 
