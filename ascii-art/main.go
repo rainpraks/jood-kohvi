@@ -38,18 +38,20 @@ func MapCharacters() map[rune]ascii {
 }
 
 func printAsciiArt(inputText string, charMap map[rune]ascii) {
-										// lõhume stringi lahti ehk \n eraldab ära.
+	parts := strings.Split(inputText, "\\n")
+	for _, part := range parts {
+		fmt.Print(part)
+		fmt.Print("\n")
+
+	}
+
 	for line := 0; line < 8; line++ {
-		for index, char := range inputText { //range on siis kuni \n
-																				//if inputText[index] == '\\' && inputText[index+1] == 'n' {
-																				//	fmt.Print("\n") // iga value vajab \n
-			}
+		for _, char := range inputText {
 
 			fmt.Print(charMap[char][line])
 		}
 		fmt.Print("\n")
 	}
-
 }
 
 func main() {
