@@ -69,7 +69,7 @@ func main() {
 	printAsciiArt(inputText, charMap)
 }
 
-// Esimene l
+// Paneme iga rea eraldi
 //
 //
 //
