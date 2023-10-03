@@ -1,4 +1,4 @@
- how to solve:
+How to solve:
 
 1.Character Mapping:
 Create a map where keys represent certain characters (e.g., letters or symbols) and values are the corresponding ASCII art for those characters.

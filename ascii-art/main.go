@@ -37,7 +37,7 @@ func printAsciiArt(inputText string, charMap map[rune]ascii) {
 	parts := strings.Split(inputText, "\\n")
 	for _, part := range parts {
 		if part == "" {
-			fmt.Println("x")
+			fmt.Println("")
 			continue
 		}
 		for line := 0; line < 8; line++ {
