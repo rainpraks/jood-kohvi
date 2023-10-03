@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type ascii [8]string //
+type ascii [8]string
 
 var charMap = make(map[rune]ascii)
 
@@ -33,7 +33,11 @@ func MapCharacters() map[rune]ascii {
 
 }
 
-func printAsciiArt(inputText string, charMap map[rune]ascii) {
+func printAsciiToChar() {
+
+}
+
+/* func printAsciiArt(inputText string, charMap map[rune]ascii) {
 	parts := strings.Split(inputText, "\\n")
 	for _, part := range parts {
 		if part == "" {
@@ -48,8 +52,10 @@ func printAsciiArt(inputText string, charMap map[rune]ascii) {
 			fmt.Print("\n")
 
 		}
+
+
 	}
-}
+} */
 
 func main() {
 	if len(os.Args) != 2 {
@@ -62,3 +68,15 @@ func main() {
 
 	printAsciiArt(inputText, charMap)
 }
+
+// Esimene l
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
