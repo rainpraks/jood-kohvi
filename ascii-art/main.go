@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type ascii [8]string //
+type ascii [8]string
 
 var charMap = make(map[rune]ascii)
 

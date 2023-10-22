@@ -2,7 +2,7 @@
 
 Authors: Rain Praks (rainpraks) Marcus Kangur (mkangur)  Fred Kaldre (Fkaldre).
 
-See [task description]: exercise.txt [audit requirements]: https://github.com/01-edu/public/tree/master/subjects/ascii-art/reverse/audit
+See [audit requirements]: https://github.com/01-edu/public/tree/master/subjects/ascii-art/reverse/audit
 
 ## Overview
 
@@ -13,29 +13,23 @@ The program is particularly useful for scenarios where ASCII art is used as a fo
 ## Usage
 
 1. **Clone the project:** 
-clone git https://01.kood.tech/git/rpraks/ascii-art-reverse
+git clone https://01.kood.tech/git/rpraks/ascii-art-reverse
 
 2. **Run program:** 
-go run . "data.txt" .Replace data.txt content with audits question
+
+IMPORTANT: If you have your own ascii art text files, put them in the audit examples folder!
+For reverse audit examples:
+'go run . --reverse=example00.txt'<br />
+'go run . --reverse=example01.txt'<br />
+'go run . --reverse=example02.txt'<br />
+'go run . --reverse=example03.txt'<br />
+'go run . --reverse=example04.txt'<br />
+'go run . --reverse=example05.txt'<br />
+'go run . --reverse=example06.txt'<br />
+'go run . --reverse=example07.txt'<br />
+
+For normal (not reversed), use:
+'go run . "any string"
 
 3. **View the result:** 
 The generated string will be printed to the terminal.
-
-
-## Description of the Code
-
-MapCharacters Function:
-1. Reads a font file (e.g., "standard.txt") containing ASCII art characters.
-2. Maps each character to its corresponding ASCII representation.
-3. Stores the mappings in a map data structure.
-
-yuh function:
-1. Process input line by line.
-2. Identify sequences corresponding to mapped ASCII representations.
-3. Look up and print the original character.
-4. Repeat until the entire input is processed.
-
-Main Function:
-1. Read font file using MapCharacters to establish mappings.
-2. Read input file and invoke yuh for the reversal process.
-3. Print the generated result (original string) to the terminal.
