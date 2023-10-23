@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>webpage.html Temp</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <main>
+        <h1>ASCII-ART</h1>
+        <style>
+            main { text-align: center; }
+        </style>
+        <section>
+            <h2>Ascii-art is a program that consists of receiving a string as an argument and outputting the string in a graphic representation using ASCII.</h2>
+            <p>Submit your input and watch it getting artified. You can play with 3 different fonts: Standard, Shadow, and Thinkertoy</p>
+        </section>
+
+        <section>
+            <h2>inputtext</h2>
+            <form action="/ascii-art" method="POST"> 
+                <div style="display: inline-block; text-align: left;">
+                    <label for="asciiText">Write text here:</label>
+                    <textarea id="asciiText" name="asciiText" rows="4" cols="50" placeholder="Enter text" required></textarea>
+                </div>
+
+                <br>
+
+                <div style="display: inline-block; text-align: left;">
+                    <label>Choose font:</label>
+                    <label>
+                        <input id="standard" type="radio" name="asciiFont" value="standard" checked> Standard
+                    </label>
+
+                    <label>
+                        <input id="thinkertoy" type="radio" name="asciiFont" value="thinkertoy"> Thinkertoy
+                    </label>
+
+                    <label>
+                        <input id="shadow" type="radio" name="asciiFont" value="shadow"> Shadow
+                    </label>
+                </div>
+
+                <br>
+
+                <button type="submit">Generate ASCII art</button> 
+            </form>
+        </section>
+
+        <section>
+            <h2>Ascii-art result</h2>
+            <div id="asciiOutput" class="ascii-output">
+                <pre>{{.}}</pre>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
