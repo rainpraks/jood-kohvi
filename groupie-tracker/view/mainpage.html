@@ -3,12 +3,26 @@
 <head>
     <title>Groupie Trackers</title>
     <meta charset="UTF-8">
+    <style>
+        .band {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <main>
-            <section>
-
-            </section>
+        <section>
+            <h1>Band Names</h1>
+            {{range .Bands}}
+            <div class="band">
+                <button>
+                    {{.Name}}
+                </button>
+            </div>
+            {{end}}
+        </section>
     </main>
 </body>
 </html>

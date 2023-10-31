@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"groupie-trackers/controllers"
 	"html/template"
 	"net/http"
@@ -16,6 +17,7 @@ func main() {
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/controllers", controllers.ArtistHandler)
 	// Starts HTTP server and begins listening for incoming HTTP requests.
+	fmt.Println("servu huugab")
 	http.ListenAndServe(":8080", nil)
 }
 

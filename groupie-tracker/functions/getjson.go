@@ -34,7 +34,7 @@ type Artist struct {
 	Relations    string   `json:"relations"`
 }
 
-func GetArtistFunc() {
+func GetArtistFunc() []Artist {
 	client = &http.Client{Timeout: 10 * time.Second}
 	fmt.Println("get artist")
 	url := "https://groupietrackers.herokuapp.com/api/artists"
@@ -42,9 +42,8 @@ func GetArtistFunc() {
 	err := GetJson(url, &artists)
 	if err != nil {
 		fmt.Printf("error getting Artist: %s\n", err.Error())
-	} else {
-		fmt.Println(artists[0].Id, artists[0].Name, artists[0].Members)
 	}
+	return artists
 }
 
 type Location struct {
